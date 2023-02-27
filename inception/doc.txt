@@ -1,0 +1,81 @@
+
+ DOCKER ?
+	technologies de virtualisation software
+	plate-forme de conteneurs logicielle. Contient de nombreuses images (contenu dans des registres docker)
+	dans inception nous devons creer nos propres images.
+
+IMAGE DOCKER ?
+	tous les elements necessaires a l'execution d'un logiciel: code, environnement d'execution, pilotes, outils, scripts, bibliotheque ....
+	--> enssemble d'element a executer pour la creation d'un conteneur.
+	--> non modifiable = necessite creation d'une nouvelle si modif.
+
+CONTENEUR ?
+	instance en cours d'execution d'une image docker
+
+DIFFERENCE AVEC VM ?
+	virtualisation software(DOCKER) : emprunte des elements utiles a son fonctionnement
+			vs
+	virtualisation hardware (VM) : VM prend un territoire sur la memoire et recreer tout un OS
+	technologies de virtualisation software
+	utilisation de noyaux et espace de stockage de l'hote
+
+	avantages : plus leger, conteneur ne contient que l'application et ces dependances mais rien d'autre
+	desavantage : moins encapsule ?
+
+NOYAUX, SERVICE, DEPENDANCE ?
+	Noyaux = essentiellement le Kernel
+	services = applications, Base de donnee, serveur wed ...
+	dependance = librairie, fichiers de configuratioin, ressources externes essentiel
+
+STOCKAGE DE DATA DANS DOCKER ?
+	volumes et bind sont des methodes de stockage de donnee.
+	Volumes est gere par dockers
+	Bind est gere par l'utilisateur
+
+CPY-ON-WRITE ?
+
+	cpy seulement si le fichier est modifier. Sinon l'element copier pointera sur le meme espace memoire que l'original
+	utilite pour docker : permet un deploiment plus rapide est plus leger
+
+NGINX ?
+	Nginx : en gros c'est un serveur
+
+PAAS ?
+	plateforme de developpement d'application dans le cloud
+
+TLS ?
+	Trassport Layer Security : protocole de securisation des echanges par reseau informatique
+
+
+SOURCES :
+
+TUTO LIGNE DIRECTRICE
+	- tuto pour inception
+	https://tuto.grademe.fr/inception/
+
+GENERALITE DOCKER (trouve en cherchant la definition d'une image) + virtualisation plus contrainte de docker dans le monde reel.
+	https://www.oracle.com/fr/cloud/cloud-native/container-registry/what-is-docker/
+
+DIFFERENCE AVEC VM
+	https://www.padok.fr/blog/machines-virtuelles-docker
+
+STOCKAGE DE DATA DANS DOCKER:
+	- description des volumes et des bind + leur cmds
+	https://www.data-transitionnumerique.com/docker-volume/
+	https://www.n0tes.fr/2019/05/15/Docker-volume-et-bind/
+
+	- surtout pour apprendre le fonctionnement general de dockers
+	https://www.lemagit.fr/conseil/Containers-Docker-quelles-sont-les-options-pour-le-stockage-persistant
+
+	- doc officiel sur les volumes et les binds
+	https://docs.docker.com/storage/volumes/
+	https://docs.docker.com/storage/bind-mounts/
+
+Generalites:
+	- qu'est ce que le copy on write ?
+	https://en.wikipedia.org/wiki/Copy-on-write
+
+	- qu'est ce qu'est Nginx ?
+	https://kinsta.com/fr/base-de-connaissances/qu-est-ce-que-nginx/
+
+
