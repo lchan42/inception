@@ -71,7 +71,20 @@ STOCKAGE DE DATA DANS DOCKER:
 	https://docs.docker.com/storage/volumes/
 	https://docs.docker.com/storage/bind-mounts/
 
-Generalites:
+UTILISATION DOCKER:
+	https://www.wanadev.fr/24-tuto-docker-demarrer-docker-partie-2/
+
+VM :
+	- installer debian
+	https://linuxopsys.com/topics/install-debian-on-virtualbox
+	- sudo
+	https://medium.com/platform-engineer/how-to-enable-sudo-on-a-user-account-on-debian-494d3c75ee21
+	- installer docker
+	https://www.it-connect.fr/installation-pas-a-pas-de-docker-sur-debian-11/
+	https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket
+	doc en anglais	https://docs.docker.com/engine/install/debian/
+	doc pour chmod	https://docs.docker.com/engine/install/linux-postinstall/
+GENERALITES:
 	- qu'est ce que le copy on write ?
 	https://en.wikipedia.org/wiki/Copy-on-write
 
@@ -79,3 +92,7 @@ Generalites:
 	https://kinsta.com/fr/base-de-connaissances/qu-est-ce-que-nginx/
 
 
+
+
+DIVERS:
+	- recuperer la sourie de la VM : control (cote droit du clavier)
