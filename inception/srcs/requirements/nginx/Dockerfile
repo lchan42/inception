@@ -1,20 +1,31 @@
 FROM		debian:buster
 
-RUN			apt update
-RUN			apt install nginx -y
-RUN			apt install vim -y
-RUN			apt install curl -y
-RUN			mkdir -p /etc/nginx/ssl
-RUN			apt install openssl -y
-RUN			openssl req -x509 -nodes -out /etc/nginx/ssl/inception.crt -keyout /etc/nginx/ssl/inception.key -subj "/C=FR/ST=IDF/L=Paris/O=42/OU=42/CN=login.42.fr/UID=login"
-RUN			mkdir -p /var/run/nginx
+# Install nginx, openssl and configure SSL
+RUN			apt update \
+			&& apt install	nginx -y \
+							openssl -y \
+#							vim -y \
+#							curl -y \
+			&& mkdir -p /etc/nginx/ssl \
+			&& openssl req -x509 -nodes \
+			-out /etc/nginx/ssl/inception.crt \
+			-keyout /etc/nginx/ssl/inception.key \
+			-subj "/C=FR/ST=IDF/L=Paris/O=42/OU=42/CN=login.42.fr/UID=login"\
+			&& mkdir -p /var/run/nginx
+
+
+#RUN			apt install nginx -y
+#RUN			apt install vim -y
+#RUN			apt install curl -y
+#RUN			apt install openssl -y
+#RUN			mkdir -p /etc/nginx/ssl
 
 
 #COPY		conf/nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE		443
 
-ENTRYPOINT
+ENTRYPOINT	["tail", "-f"]
 
 
 #docker build srcs/requirements/nginx -t nginx
