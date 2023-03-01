@@ -1,0 +1,14 @@
+- creer une image :
+	docker build + srcs
+	docker build -t nginx
+	docker build srcs/requirements/nginx/ -t nginx
+
+- voir les images actuelle :
+	docker image ls
+
+- lancer une image
+	docker run nginx
+
+- voir containers actuellement lancers:
+	docker ps
+
