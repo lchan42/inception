@@ -44,7 +44,13 @@ PAAS ?
 	plateforme de developpement d'application dans le cloud
 
 TLS ?
-	Trassport Layer Security : protocole de securisation des echanges par reseau informatique
+	Trassport Layer Security : protocole d'encryptage de securisation des echanges par reseau informatique
+	"version ameliore du ssl (?)" gage de securite quant a la securite des sites internets (ex : email des utilisateurs sont cryptes)
+	il existe different type de certificat plus ou moins pertinant en fonction de nos objectifs
+	ssl = secure socket layer
+
+OPENSSL ?
+	outils permettant la gestion des certificats et cle de chiffrage
 
 
 SOURCES :
@@ -84,6 +90,16 @@ VM :
 	https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket
 	doc en anglais	https://docs.docker.com/engine/install/debian/
 	doc pour chmod	https://docs.docker.com/engine/install/linux-postinstall/
+
+NGINX et SSL :
+	- configurer SSL pour nginx
+	https://www.kinamo.fr/fr/support/faq/installation-certificat-ssl-nginx
+	- ssl en gros
+	https://www.certeurope.fr/blog/tout-savoir-sur-les-certificats-ssl/
+	- openssl
+	https://www.kinamo.fr/fr/support/faq/comment-generer-une-demande-de-certificat-ssl-csr-avec-openssl
+
+
 GENERALITES:
 	- qu'est ce que le copy on write ?
 	https://en.wikipedia.org/wiki/Copy-on-write
