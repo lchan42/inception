@@ -12,3 +12,5 @@
 - voir containers actuellement lancers:
 	docker ps
 
+- purge
+	docker system prune -a -f

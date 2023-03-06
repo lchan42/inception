@@ -5,10 +5,12 @@ RUN			apt update \
 			&& apt install nginx -y openssl -y \
 			&& mkdir -p /etc/nginx/ssl \
 			&& openssl req -x509 -nodes \
-			-out /etc/nginx/ssl/inception.crt \
-			-keyout /etc/nginx/ssl/inception.key \
+			-out /etc/nginx/ssl/lchan.42.fr.crt \
+			-keyout /etc/nginx/ssl/lchan.42.fr.key \
 			-subj "/C=FR/ST=IDF/L=Paris/O=42/OU=42/CN=lchan.42.fr/UID=lchan"\
 			&& mkdir -p /var/run/nginx
+# RUN chmod 755 /var/www/html
+# RUN chown -R www-data:www-data /var/www/html
 
 #			-out /etc/nginx/ssl/lchan.42.fr.crt \
 #			-keyout /etc/nginx/ssl/lchan.42.fr.key \
@@ -32,3 +34,4 @@ CMD	[ "nginx", "-g", "daemon off;" ]
 # commande
 # docker build srcs/requirements/nginx -t nginx
 # docker rmi -f 013c344c8936 31fd7282cf89 7ad675a54c03 547ca0c4e784
+# docker system prune -a -f && docker build srcs/requirements/nginx -t nginx && docker run -it nginx
