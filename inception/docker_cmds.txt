@@ -13,4 +13,4 @@
 	docker ps
 
 - purge
-	docker system prune -a -f
+	docker system prune -a -f 

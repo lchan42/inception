@@ -3,17 +3,19 @@ FROM		debian:buster
 # Install nginx + openssl and configure them
 RUN			apt update \
 			&& apt install nginx -y openssl -y \
+			&& mkdir -p /var/run/nginx \
 			&& mkdir -p /etc/nginx/ssl \
 			&& openssl req -x509 -nodes \
 			-out /etc/nginx/ssl/lchan.42.fr.crt \
 			-keyout /etc/nginx/ssl/lchan.42.fr.key \
-			-subj "/C=FR/ST=IDF/L=Paris/O=42/OU=42/CN=lchan.42.fr/UID=lchan"\
-			&& mkdir -p /var/run/nginx
-# RUN chmod 755 /var/www/html
-# RUN chown -R www-data:www-data /var/www/html
+			-subj "/C=FR/ST=IDF/L=Paris/O=42/OU=42/CN=lchan.42.fr/UID=lchan";
+RUN			chmod 755 /var/www
+RUN			chown -R www-data:www-data /var/www
+RUN			chmod 755 /var/www/html
+RUN			chown -R www-data:www-data /var/www/html
 
-#			-out /etc/nginx/ssl/lchan.42.fr.crt \
-#			-keyout /etc/nginx/ssl/lchan.42.fr.key \
+
+			# && mkdir -p /var/www/wordpress\
 
 # copy our configuration file into nginx container
 COPY		conf/nginx.conf /etc/nginx/nginx.conf
