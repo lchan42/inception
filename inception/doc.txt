@@ -39,6 +39,7 @@ CPY-ON-WRITE ?
 
 NGINX ?
 	Nginx : en gros c'est un serveur
+	welcome page : docker run -d -p 42421:443 -it nginx (sur VM car le part feu de 42)
 
 PAAS ?
 	plateforme de developpement d'application dans le cloud
@@ -52,6 +53,7 @@ TLS ?
 OPENSSL ?
 	outils permettant la gestion des certificats et cle de chiffrage
 
+NGINX WELCOME
 
 SOURCES :
 
