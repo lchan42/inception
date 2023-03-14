@@ -19,19 +19,26 @@ echo "hello 5"
 
 mysql -e "UPDATE mysql.user SET Password='${MYSQL_ROOT_PWD}' WHERE User='root';"
 echo "hello 6"
-mysql -e "GRANT ALL PRIVILEGES ON \`${MYSQL_DATABASE}\`.* TO 'root'@'%' IDENTIFIED BY '${MYSQL_ROOT_PWD}';"
+mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '${MYSQL_ROOT_PWD}';"
 mysql -e "FLUSH PRIVILEGES;"
 echo "hello 7"
+mysql -e "SHOW GRANTS FOR 'root'@'%';"
+mysql -e "SHOW GRANTS FOR '${MYSQL_USER}'@localhost;"
+echo "hello 8"
+
+echo "hello 9"
+echo "goodbye from Maria"
+
+
 # mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '${MYSQL_ROOT_PWD}';"
 # mysql -e "FLUSH PRIVILEGES;"
 # killall -15 mysqld
-mysqladmin -u root -p$MYSQL_ROOT_PWD shutdown
-echo "hello 8"
+# mysqladmin -u root -p$MYSQL_ROOT_PWD shutdown
 # service mysql -u -root -p start ;
 # systemctl start mysqld;
-exec mysqld_safe
-echo "hello 9"
-echo "goodbye"
+# exec mysqld_safe
+
+
 
 #### just a reminder ####
 # mysql -u root -p --> --updade --password
