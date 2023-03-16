@@ -26,6 +26,8 @@ mysql -e "UPDATE mysql.user  SET Password='${MYSQL_ROOT_PWD}' WHERE User='root';
 mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '${MYSQL_ROOT_PWD}';"
 mysql -e "SELECT user, host, password, Shutdown_priv FROM mysql.user;"
 mysql -e "FLUSH PRIVILEGES;"
+mysql -u root -p${MYSQL_ROOT_PWD} -e "QUIT;"
+
 fi
 
 sleep 2
