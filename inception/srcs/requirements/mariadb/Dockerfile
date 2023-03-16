@@ -14,3 +14,4 @@ EXPOSE			3306
 CMD		./mariadb_script.sh
 
 
+
