@@ -14,12 +14,14 @@ RUN				chmod 755 /var/www
 RUN				chown -R www-data:www-data /var/www
 RUN				chmod 755 /var/www/html
 RUN				chown -R www-data:www-data /var/www/html
-
+RUN				rm /etc/nginx/sites-enabled/default
 
 			# && mkdir -p /var/www/wordpress\
 
 # copy our configuration file into nginx container
 COPY			conf/nginx.conf /etc/nginx/nginx.conf
+COPY			conf/nginx.conf /etc/nginx/sites-enabled/nginx.conf
+
 
 EXPOSE			443
 
