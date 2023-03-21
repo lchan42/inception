@@ -2,13 +2,15 @@
 
 
 sleep 10
-wp core download	--allow-root --locale=fr_FR
+wp core download
+echo "wordpress download"
 wp config create	--allow-root \
 					--dbname=$MYSQL_DATABASE \
 					--dbuser=$MYSQL_USER \
 					--dbpass=$MYSQL_PWD \
 					--dbhost=mariadb:3306 \
 					--path='/var/www/wordpress'
+echo "wp-config.php created"
 
 wp core install		--allow-root --locale=fr_FR\
 					--url='https://lchan.42.fr' \
@@ -16,6 +18,9 @@ wp core install		--allow-root --locale=fr_FR\
 					--admin_user=$WORDPRESS_ADMIN_USER \
 					--admin_password=$WORDPRESS_ADMIN_PASSWORD \
 					--admin_email=$WORDPRESS_ADMIN_EMAIL
+echo "Wordpress installed"
+
+exec "$@"
 
 #wp user create --allow-root ${WORDPRESS_USER_2} ${WORDPRESS_USER_2_EMAIL} --role=author --user_pass=${WORDPRESS_USER_2_MDP}
 # wp cache flush --allow-root
