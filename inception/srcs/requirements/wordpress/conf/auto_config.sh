@@ -1,15 +1,5 @@
 #!bin/bash
 
-export MYSQL_DATABASE=Wordpress
-export MYSQL_ROOT_PWD=MariadbRootPwd
-export MYSQL_USER=MariadbUser
-export MYSQL_PWD=MariadbPwd
-
-export WORDPRESS_TITLE=Inception
-export WORDPRESS_ADMIN_USER=Admin42
-export WORDPRESS_ADMIN_PASSWORD=password42
-export WORDPRESS_ADMIN_EMAIL=email@domain.com
-
 
 sleep 10
 wp core download	--allow-root --locale=fr_FR
