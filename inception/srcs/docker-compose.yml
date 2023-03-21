@@ -13,7 +13,6 @@ volumes :
       type: volume
       o: bind
       device: /home/lchan/data/mariadb
-      # /home/lchan/data/mariadb
 
 networks:
   inception:
