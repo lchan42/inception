@@ -7,7 +7,7 @@
 
 service mysql start
 
-sleep 2
+sleep 10
 
 if [ -d "/var/lib/mysql/$MYSQL_DATABASE" ]
 then

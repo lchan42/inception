@@ -30,7 +30,7 @@ down :
 
 clean :
 	make down \
-	&& sudo docker system prune -a \
+	&& sudo docker system prune -af \
 	&& sudo docker volume rm srcs_mariadb srcs_wordpress
 
 re : down clean build
