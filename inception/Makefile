@@ -5,13 +5,12 @@ build :
 	docker-compose -f ./srcs/docker-compose.yml build \
 	&& docker-compose -f ./srcs/docker-compose.yml up -d
 
-
 down :
 	docker-compose -f ./srcs/docker-compose.yml down
 
 clean :
 	make down \
-	&& docker system prune -a \
+	&& docker system prune -af \
 	&& docker volume rm srcs_mariadb srcs_wordpress
 
 re : down clean build
