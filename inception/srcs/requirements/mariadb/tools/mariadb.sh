@@ -9,7 +9,6 @@ export MYSQL_PWD=MariadbPwd
 
 if [ -d "/var/lib/mysql/$MYSQL_DATABASE" ]
 then
-
 	echo "Database already exists"
 else
 # Set root so that connexion without password is not possible
