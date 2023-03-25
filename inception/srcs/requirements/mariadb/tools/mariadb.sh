@@ -5,17 +5,16 @@ export MYSQL_PWD=MariadbPwd
 
 # set -x
 
-service mysql start
 
-sleep 4
 
 if [ -d "/var/lib/mysql/$MYSQL_DATABASE" ]
 then
 
 	echo "Database already exists"
 else
-
 # Set root so that connexion without password is not possible
+service mysql start
+sleep 4
 mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '${MYSQL_ROOT_PWD}';"
 echo $?
 mysql -u root -p${MYSQL_ROOT_PWD} -e  "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '${MYSQL_ROOT_PWD}';"
