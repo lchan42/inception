@@ -21,9 +21,9 @@
 all : build
 
 build :
- 	mkdir /data/mariadb -p
-	mkdir /data/wordpress -p
-	sudo docker-compose -f ./srcs/docker-compose.yml build \
+ 	mkdir /data/mariadb -p \
+	&& mkdir /data/wordpress -p \
+	&& sudo docker-compose -f ./srcs/docker-compose.yml build \
 	&& sudo docker-compose -f ./srcs/docker-compose.yml up -d
 
 
