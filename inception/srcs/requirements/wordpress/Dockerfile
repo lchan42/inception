@@ -30,6 +30,7 @@ RUN chmod +x ./auto_config.sh
 EXPOSE 9000
 
 COPY ./conf/www.conf /etc/php/7.3/fpm/pool.d/www.conf
+COPY ./conf/www.conf /etc/php7/php-fpm/www.conf
 
 
 
