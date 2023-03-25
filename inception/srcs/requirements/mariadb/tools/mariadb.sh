@@ -32,13 +32,11 @@ mysql -u root -p${MYSQL_ROOT_PWD} -e "FLUSH PRIVILEGES;"
 echo $?
 mysql -u root -p${MYSQL_ROOT_PWD} -e "SELECT user, host, password, Shutdown_priv FROM mysql.user;"
 echo $?
-
-fi
-
 mysqladmin -u root -p${MYSQL_ROOT_PWD} shutdown
 echo $?
 sleep 2
-echo $?
+fi
+
 exec mysqld_safe # --skip-grant-tables
 echo $?
 # set +x
@@ -50,3 +48,6 @@ echo $?
 # mysql -e "FLUSH PRIVILEGES;"
 # mysql -e "DELETE FROM mysql.user WHERE User='';"
 # mysql -e "DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');"
+
+
+#docker run --entrypoint /bin/bash -it mariadb
