@@ -2,7 +2,7 @@
 
 
 sleep 10
-wp core download
+wp core download --allow-root
 echo "wordpress download"
 wp config create	--allow-root \
 					--dbname=$MYSQL_DATABASE \
