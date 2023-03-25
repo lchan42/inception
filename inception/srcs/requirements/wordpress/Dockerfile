@@ -7,7 +7,8 @@ RUN			apt-get update \
 			&& apt-get install -y	wget \
 									php7.3 \
 									php-fpm \
-									php-mysql
+									php-mysql \
+									mariadb-client
 
 
 WORKDIR 	/var/www
