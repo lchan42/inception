@@ -33,7 +33,7 @@ down :
 clean :
 	make down \
 	&& sudo docker system prune -af \
-	&& sudo docker volume rm srcs_mariadb srcs_wordpress
+	&& sudo docker volume rm srcs_mariadb srcs_wordpress \
 	&& sudo rm -rf ~/data
 
 re : down clean build
