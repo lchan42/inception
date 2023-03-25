@@ -12,7 +12,7 @@ wp config create	--allow-root \
 					--path='/var/www/wordpress'
 echo "wp-config.php created"
 
-wp core install		--allow-root --locale=fr_FR\
+wp core install		--allow-root --locale=fr_FR --skip-email \
 					--url='https://lchan.42.fr' \
 					--title=$WORDPRESS_TITLE \
 					--admin_user=$WORDPRESS_ADMIN_USER \
