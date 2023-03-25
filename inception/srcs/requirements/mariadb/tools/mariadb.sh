@@ -1,7 +1,7 @@
-# export MYSQL_DATABASE=Wordpress
-# export MYSQL_ROOT_PWD=MariadbRootPwd
-# export MYSQL_USER=MariadbUser
-# export MYSQL_PWD=MariadbPwd
+export MYSQL_DATABASE=Wordpress
+export MYSQL_ROOT_PWD=MariadbRootPwd
+export MYSQL_USER=MariadbUser
+export MYSQL_PWD=MariadbPwd
 
 # set -x
 
@@ -30,6 +30,8 @@ mysql -u root -p${MYSQL_ROOT_PWD} -e "SELECT user, host, password, Shutdown_priv
 fi
 
 mysqladmin -u root -p${MYSQL_ROOT_PWD} shutdown
+
+sleep 2
 
 exec mysqld_safe # --skip-grant-tables
 
