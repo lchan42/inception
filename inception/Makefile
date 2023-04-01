@@ -36,7 +36,7 @@ clean :
 
 vclean :
 	sudo rm -rf ~/data/mariadb  \
-	&& sudo mkdir ~/data/wordpress
+	&& sudo rm -rf ~/data/wordpress
 
 fclean :
 	make clean \
