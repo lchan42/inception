@@ -26,7 +26,6 @@ build :
 	&& sudo docker-compose -f ./srcs/docker-compose.yml build \
 	&& sudo docker-compose -f ./srcs/docker-compose.yml up -d
 
-
 down :
 	sudo docker-compose -f ./srcs/docker-compose.yml down
 
@@ -35,9 +34,16 @@ clean :
 	&& sudo docker system prune -af \
 	&& sudo docker volume rm srcs_mariadb srcs_wordpress \
 
+vclean :
+	rm -rf ~/data/mariadb -p \
+	&& mkdir ~/data/wordpress -p
+
 checklogs :
+	echo " ~~~~ nginx logs ~~~~"
 	docker logs nginx
+	echo " ~~~~ mariadb logs ~~~~"
 	docker logs mariadb
+	echo " ~~~~ wordpress logs ~~~~"
 	docker logs wordpress
 
 re : down clean build
