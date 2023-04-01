@@ -39,11 +39,11 @@ vclean :
 	&& mkdir ~/data/wordpress -p
 
 checklogs :
-	echo " ~~~~ nginx logs ~~~~"
+	@echo " ~~~~ nginx logs ~~~~"
 	docker logs nginx
-	echo " ~~~~ mariadb logs ~~~~"
+	@echo " ~~~~ mariadb logs ~~~~"
 	docker logs mariadb
-	echo " ~~~~ wordpress logs ~~~~"
+	@echo " ~~~~ wordpress logs ~~~~"
 	docker logs wordpress
 
 re : down clean build
