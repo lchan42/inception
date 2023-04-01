@@ -40,7 +40,7 @@ vclean :
 
 fclean :
 	make clean \
-	&& make clean
+	&& make vclean
 
 
 
