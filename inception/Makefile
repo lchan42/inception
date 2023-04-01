@@ -35,8 +35,8 @@ clean :
 	&& sudo docker volume rm srcs_mariadb srcs_wordpress \
 
 vclean :
-	rm -rf ~/data/mariadb  \
-	&& mkdir ~/data/wordpress
+	sudo rm -rf ~/data/mariadb  \
+	&& sudo mkdir ~/data/wordpress
 
 fclean :
 	make clean \
