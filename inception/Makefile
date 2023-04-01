@@ -35,6 +35,11 @@ clean :
 	&& sudo docker system prune -af \
 	&& sudo docker volume rm srcs_mariadb srcs_wordpress \
 
+checklogs :
+	docker logs nginx
+	docker logs mariadb
+	docker logs wordpress
+
 re : down clean build
 
 .PHONY : build down re rmi
