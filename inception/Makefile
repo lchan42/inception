@@ -35,8 +35,14 @@ clean :
 	&& sudo docker volume rm srcs_mariadb srcs_wordpress \
 
 vclean :
-	rm -rf ~/data/mariadb -p \
-	&& mkdir ~/data/wordpress -p
+	rm -rf ~/data/mariadb  \
+	&& mkdir ~/data/wordpress
+
+fclean :
+	make clean \
+	&& make clean
+
+
 
 checklogs :
 	@echo " ~~~~ nginx logs ~~~~"
