@@ -42,15 +42,13 @@ fclean :
 	make clean \
 	&& make vclean
 
-
-
 checklogs :
 	@echo " ~~~~ nginx logs ~~~~"
-	docker logs nginx
+	@docker logs nginx
 	@echo " ~~~~ mariadb logs ~~~~"
-	docker logs mariadb
+	@docker logs mariadb
 	@echo " ~~~~ wordpress logs ~~~~"
-	docker logs wordpress
+	@docker logs wordpress
 
 re : down clean build
 
