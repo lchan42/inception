@@ -45,10 +45,15 @@ fclean :
 checklogs :
 	@echo " ~~~~ nginx logs ~~~~"
 	@docker logs nginx
+	@echo "		===> nginx logs:"
+	@docker exec nginx bash && cd /var/log && cat
 	@echo " ~~~~ mariadb logs ~~~~"
 	@docker logs mariadb
+	@echo "		===> mariadb logs:"
 	@echo " ~~~~ wordpress logs ~~~~"
 	@docker logs wordpress
+	@echo "		===> mariadb logs:"
+
 
 re : down clean build
 
