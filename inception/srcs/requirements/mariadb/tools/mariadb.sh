@@ -1,7 +1,7 @@
-export MYSQL_DATABASE=Wordpress
-export MYSQL_ROOT_PWD=MariadbRootPwd
-export MYSQL_USER=MariadbUser
-export MYSQL_PWD=MariadbPwd
+# export MYSQL_DATABASE=Wordpress
+# export MYSQL_ROOT_PWD=MariadbRootPwd
+# export MYSQL_USER=MariadbUser
+# export MYSQL_PWD=MariadbPwd
 
 # set -x
 

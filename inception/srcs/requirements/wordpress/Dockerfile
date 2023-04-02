@@ -1,6 +1,7 @@
 FROM		debian:buster
 
 # Install nginx + openssl and configure them
+
 RUN			apt-get update \
 			&& apt-get upgrade -y \
 			# we 'll install wordpress via a link, we therefore need wget
@@ -23,8 +24,6 @@ RUN			mv wp-cli.phar /usr/local/bin/wp
 
 # RUN			wget https://github.com/wp-cli/wp-cli/raw/master/utils/wp-completion.bash
 
-
-
 COPY ./conf/auto_config.sh ./
 
 RUN chmod +x ./auto_config.sh
@@ -33,8 +32,6 @@ EXPOSE 9000
 
 COPY ./conf/www.conf /etc/php/7.3/fpm/pool.d/www.conf
 COPY ./conf/www.conf /etc/php7/php-fpm/www.conf
-
-
 
 ENTRYPOINT ["sh", "./auto_config.sh"]
 

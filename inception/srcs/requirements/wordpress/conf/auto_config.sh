@@ -3,7 +3,7 @@
 
 sleep 10
 wp core download --allow-root --path='/var/www/wordpress'
-echo "wordpress download"
+echo "wordpress downloaded"
 wp config create	--allow-root \
 					--dbname=$MYSQL_DATABASE \
 					--dbuser=$MYSQL_USER \

@@ -44,9 +44,13 @@ fclean :
 
 checklogs :
 	@echo " ~~~~ nginx logs ~~~~"
-	@docker logs nginx
+	@echo "		===> docker logs :" && docker logs nginx
+	@docker exec nginx bash & cd /var/log
+	@echo "		===> faillog :"		&& cat /nginx/access.log
+
+	@echo "		===> faillog :"
+
 	@echo "		===> nginx logs:"
-	@docker exec nginx bash && cd /var/log && cat
 	@echo " ~~~~ mariadb logs ~~~~"
 	@docker logs mariadb
 	@echo "		===> mariadb logs:"
