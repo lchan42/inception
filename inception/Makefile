@@ -43,20 +43,12 @@ fclean :
 	&& make vclean
 
 checklogs :
-	@echo " ~~~~ nginx logs ~~~~"
-	@echo "		===> docker logs :" && docker logs nginx
-	@docker exec nginx bash && cd /var/log
-	@echo "		===> faillog :"		&& cat /nginx/access.log
-
-	@echo "		===> faillog :"
-
-	@echo "		===> nginx logs:"
-	@echo " ~~~~ mariadb logs ~~~~"
+	@echo " ~~~~ docker logs nginx ~~~~"
+	@docker logs nginx
+	@echo " ~~~~ docker logs mariadb logs ~~~~"
 	@docker logs mariadb
-	@echo "		===> mariadb logs:"
-	@echo " ~~~~ wordpress logs ~~~~"
+	@echo " ~~~~ docker logs wordpress logs ~~~~"
 	@docker logs wordpress
-	@echo "		===> mariadb logs:"
 
 
 re : down clean build
