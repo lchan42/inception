@@ -21,7 +21,10 @@ wp core install		--allow-root --locale=fr_FR --skip-email \
 					--path='/var/www/wordpress'
 echo "Wordpress installed"
 
-#wp user create --allow-root ${WORDPRESS_USER_2} ${WORDPRESS_USER_2_EMAIL} --role=author --user_pass=${WORDPRESS_USER_2_MDP} --path='/var/www/wordpress'
+#wp user create 	--allow-root ${WORDPRESS_USER_2} ${WORDPRESS_USER_2_EMAIL}
+--role=author
+--user_pass=${WORDPRESS_USER_2_MDP}
+--path='/var/www/wordpress'
 # wp cache flush --allow-root
 # wp theme install wpkites --activate --allow-root
 

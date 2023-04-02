@@ -21,7 +21,6 @@ mysql -u root -p${MYSQL_ROOT_PWD} -e "CREATE DATABASE IF NOT EXISTS \`${MYSQL_DA
 mysql -u root -p${MYSQL_ROOT_PWD} -e "CREATE USER IF NOT EXISTS \`${MYSQL_USER}\`@'%' IDENTIFIED BY '${MYSQL_PWD}';"
 mysql -u root -p${MYSQL_ROOT_PWD} -e "GRANT ALL PRIVILEGES ON \`${MYSQL_DATABASE}\`.* TO \`${MYSQL_USER}\`@'%' IDENTIFIED BY '${MYSQL_PWD}';"
 mysql -u root -p${MYSQL_ROOT_PWD} -e "FLUSH PRIVILEGES;"
-mysql -u root -p${MYSQL_ROOT_PWD} -e "SELECT user, host, password, Shutdown_priv FROM mysql.user;"
 mysqladmin -u root -p${MYSQL_ROOT_PWD} shutdown
 sleep 2
 fi
@@ -31,11 +30,6 @@ exec mysqld_safe # --skip-grant-tables
 
 #### just a reminder ####
 # mysql -u root -p --> --updade --password
-
-#### deleted line ####
-# mysql -e "FLUSH PRIVILEGES;"
-# mysql -e "DELETE FROM mysql.user WHERE User='';"
-# mysql -e "DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');"
-
+# mysql -u root -p${MYSQL_ROOT_PWD} -e "SELECT user, host, password, Shutdown_priv FROM mysql.user;"
 
 #docker run --entrypoint /bin/bash -it mariadb
