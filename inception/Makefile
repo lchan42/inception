@@ -45,7 +45,7 @@ fclean :
 checklogs :
 	@echo " ~~~~ nginx logs ~~~~"
 	@echo "		===> docker logs :" && docker logs nginx
-	@docker exec nginx -it bash && cd /var/log
+	@docker exec -it nginx bash && cd /var/log
 	@echo "		===> faillog :"		&& cat /nginx/access.log
 
 	@echo "		===> faillog :"
