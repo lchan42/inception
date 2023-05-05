@@ -38,4 +38,4 @@ COPY ./conf/www.conf /etc/php7/php-fpm/www.conf
 ENTRYPOINT ["sh", "./auto_config.sh"]
 
 #CMD ["/usr/bin/php7.3", "-F"]
-#https://www.linode.com/docs/guides/how-to-install-wordpress-using-wp-cli-on-debian-10/#activate-bash-completion
+# check https://www.linode.com/docs/guides/how-to-install-wordpress-using-wp-cli-on-debian-10/#activate-bash-completion

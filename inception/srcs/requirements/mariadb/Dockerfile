@@ -12,8 +12,6 @@ COPY		./conf/50-server.cnf	/etc/mysql/mariadb.conf.d/50-server.cnf
 
 EXPOSE		3306
 
-
-
 ENTRYPOINT ["sh", "./mariadb.sh"]
 CMD			"mysqld_safe"
 
