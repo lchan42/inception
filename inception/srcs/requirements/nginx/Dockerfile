@@ -12,10 +12,8 @@ RUN				apt-get update \
 				-subj "/C=FR/ST=IDF/L=Paris/O=42/OU=42/CN=lchan.42.fr/UID=lchan"
 RUN				chmod 755 /var/www
 RUN				chown -R www-data:www-data /var/www
-RUN				chmod 755 /var/www/wordpress
-# RUN				chmod 755 /var/www/html
-RUN				chown -R www-data:www-data /var/www/wordpress
-# RUN				chown -R www-data:www-data /var/www/html
+RUN				chmod 755 /var/www/html
+RUN				chown -R www-data:www-data /var/www/html
 RUN				rm /etc/nginx/sites-enabled/default
 
 			# && mkdir -p /var/www/wordpress\
