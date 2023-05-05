@@ -114,3 +114,6 @@ GENERALITES:
 
 DIVERS:
 	- recuperer la sourie de la VM : control (cote droit du clavier)
+
+
+lchan.42.fr/wp-login.php

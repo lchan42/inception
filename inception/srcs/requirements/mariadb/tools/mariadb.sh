@@ -33,7 +33,8 @@ mysqladmin -u root -p${MYSQL_ROOT_PWD} shutdown
 sleep 2
 fi
 
-exec mysqld_safe # --skip-grant-tables
+exec $@
+# exec mysqld_safe # --skip-grant-tables
 # set +x
 
 #### just a reminder ####
