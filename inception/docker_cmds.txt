@@ -13,4 +13,15 @@
 	docker ps
 
 - purge
-	docker system prune -a -f 
+	docker system prune -a -f
+
+Docker container:
+	docker ps : to get <containder_id>
+	then
+	docker exec -it <container_id> /bin/bash
+	mysql -u root -p
+		show databases;
+		use Wordpress;
+		SELECT * FROM wp_users
+
+lchan.42.fr/wp-login.php

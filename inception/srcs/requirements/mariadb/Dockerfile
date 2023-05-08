@@ -1,6 +1,6 @@
 FROM		debian:buster
 
-# Install nginx + openssl and configure them
+# Install / configure
 RUN			apt-get update \
 			&& apt-get upgrade -y \
 			&& apt-get install -y mariadb-server mariadb-client

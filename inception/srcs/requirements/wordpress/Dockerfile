@@ -1,10 +1,9 @@
 FROM		debian:buster
 
-# Install nginx + openssl and configure them
-
 RUN			apt-get update \
 			&& apt-get upgrade -y \
 			# we 'll install wordpress via a link, we therefore need wget
+			# mariadb-client : tool that allows users to connect to MariaDB or MySQL in order to interact with it
 			&& apt-get install -y	wget \
 									php7.3 \
 									php-fpm \

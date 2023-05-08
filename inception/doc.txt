@@ -45,7 +45,7 @@ PAAS ?
 	plateforme de developpement d'application dans le cloud
 
 TLS ?
-	Trassport Layer Security : protocole d'encryptage de securisation des echanges par reseau informatique
+	Transport Layer Security : protocole d'encryptage de securisation des echanges par reseau informatique
 	"version ameliore du ssl (?)" gage de securite quant a la securite des sites internets (ex : email des utilisateurs sont cryptes)
 	il existe different type de certificat plus ou moins pertinant en fonction de nos objectifs
 	ssl = secure socket layer
@@ -109,11 +109,17 @@ GENERALITES:
 	- qu'est ce qu'est Nginx ?
 	https://kinsta.com/fr/base-de-connaissances/qu-est-ce-que-nginx/
 
-
-
-
 DIVERS:
 	- recuperer la sourie de la VM : control (cote droit du clavier)
 
 
-lchan.42.fr/wp-login.php
+
+Simple setup:
+Ensure that nginx can be accessed by port 443 only.
+
+nginx:
+try to access the service via http (port 80)
+
+MariaDB and its volume:
+- explain how to login to the data base
+-

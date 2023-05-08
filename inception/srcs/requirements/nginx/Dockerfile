@@ -29,8 +29,8 @@ EXPOSE			443
 CMD				[ "nginx", "-g", "daemon off;" ]
 
 #for SSL config :
-#	RUN openssl
 #	[req]	= creat form
+#	[-x509]	= form format
 #	[-node]	= no password
 #	[-out]	= destination for the certificate
 #	[-key]	= destination for the key file
