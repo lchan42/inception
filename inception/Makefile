@@ -21,7 +21,8 @@
 all : build
 
 build :
-	mkdir ~/data/mariadb -p \
+	rm srcs/.env && cp ~/Document/.env srcs/ \
+	&& mkdir ~/data/mariadb -p \
 	&& mkdir ~/data/wordpress -p \
 	&& sudo docker-compose -f ./srcs/docker-compose.yml build \
 	&& sudo docker-compose -f ./srcs/docker-compose.yml up -d
