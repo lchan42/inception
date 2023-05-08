@@ -21,7 +21,7 @@
 all : build
 
 build :
-	rm srcs/.env && cp ~/Document/.env srcs/ \
+	rm -f srcs/.env && cp ~/Document/.env srcs/ \
 	&& mkdir ~/data/mariadb -p \
 	&& mkdir ~/data/wordpress -p \
 	&& sudo docker-compose -f ./srcs/docker-compose.yml build \
@@ -41,7 +41,8 @@ vclean :
 
 fclean :
 	make clean \
-	&& make vclean
+	&& make vclean \
+	&& sudo rm -f srcs/.env
 
 checklogs :
 	@echo " ~~~~ docker logs nginx ~~~~"
