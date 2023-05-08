@@ -24,4 +24,7 @@ Docker container:
 		use Wordpress;
 		SELECT * FROM wp_users
 
-lchan.42.fr/wp-login.php
+get on login page :
+	lchan.42.fr/wp-login.php
+
+curl http://lchan.42.fr vs curl https://lchan.42.fr
